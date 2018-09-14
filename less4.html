@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="utf-8">
+<!-- Предназначен для управления режимом отображением веб-страницы в браузерах Internet Explorer --> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Включает масштабирование на мобильных устройствах -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Циклы</title>
+<!--
+<link href="styles.css" rel="stylesheet" />
+<script src="script.js"></script>
+-->
+<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+<p><a href="index.html">Back</a></p>
+<div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
+<div id="app">
+	<ul>
+		<li v-for="bear2 in bears">{{bear2}}</li>
+	</ul>
+</div>
+<hr>
+<div id="app2">
+	<ul>
+		<li v-for="xlo in xlos" v-bind:class="{ 'strike': xlo.status }">{{xlo.name}}</li>
+	</ul>
+</div>
+<script src="js/vue.js"></script>
+<script>
+var app4 = new Vue({
+  el: '#app-4',
+  data: {
+    todos: [
+      { text: 'Изучить JavaScript' },
+      { text: 'Изучить Vue' },
+      { text: 'Создать что-нибудь классное' }
+    ]
+  }
+});
+app4.todos.push({ text: 'Добавлено через push' });
+//**************************************
+var appvar = new Vue({
+	el:'#app',
+	data:{
+		bears: [
+			'гризли',
+			'белый',
+			'губач',
+			'панда',
+			'михо'
+		]
+	}
+});
+var appvar2 = new Vue({
+	el:"#app2",
+	data: {
+		xlos: [
+			{
+				name:"плохой",
+				status: true
+			},
+			{
+				name:"хороший",
+				status: false
+			},
+			{
+				name:"серый",
+				status: true
+			},
+			{
+				name:"яркий",
+				status: false
+			},
+			{
+				name:"yellow",
+				status: true
+			},
+		]
+	}
+	
+});
+</script>
+</body>
+</html>

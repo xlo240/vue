@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="utf-8">
+<!-- Предназначен для управления режимом отображением веб-страницы в браузерах Internet Explorer --> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Включает масштабирование на мобильных устройствах -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кроме интерполяции текста, можно также связывать атрибуты элементов</title>
+<!--
+<link href="styles.css" rel="stylesheet" />
+<script src="script.js"></script>
+-->
+
+</head>
+<body>
+<p><a href="index.html">Back</a></p>
+<div id="app-2">
+	<div v-bind:title="message">Наведи курсор на меня пару секунд,
+    чтобы увидеть динамически связанное значение title!</div>
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+var app2 = new Vue({
+	el: "#app-2",
+	data: {
+		message: 'Привет, Vue!'
+	}
+});
+//app2.message = 'новое сообщение';
+</script>
+</body>
+</html>

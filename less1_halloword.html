@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="utf-8">
+<!-- Предназначен для управления режимом отображением веб-страницы в браузерах Internet Explorer --> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Включает масштабирование на мобильных устройствах -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VueJS</title>
+<!--
+<link href="styles.css" rel="stylesheet" />
+<script src="script.js"></script>
+-->
+
+</head>
+<body>
+<p><a href="index.html">Back</a></p>
+<div id="app">
+	{{ message }}
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+var appvar = new Vue({
+	el: "#app",
+	data: {
+		message: 'Привет, Vue!'
+	}
+});
+//appvar.message = 'WWWWWWWW';//изменяет значение
+</script>
+</body>
+</html>
